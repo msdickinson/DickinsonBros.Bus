@@ -56,5 +56,34 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="SeedData" />
+    <Folder Include="Scehmas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\User.sql" />
+    <Build Include="Tables\Topic.sql" />
+    <Build Include="Tables\TopicItem.sql" />
+    <Build Include="StoredProcedures\InsertUser.sql" />
+    <Build Include="StoredProcedures\DeleteUser.sql" />
+    <Build Include="StoredProcedures\Subscribe.sql" />
+    <Build Include="StoredProcedures\InsertTopicItem.sql" />
+    <Build Include="StoredProcedures\Dequeue.sql" />
+    <Build Include="Scehmas\ServiceBus.sql" />
+    <Build Include="Tables\Queue.sql" />
+    <Build Include="Tables\QueueState.sql" />
+    <Build Include="StoredProcedures\InsertTopic.sql" />
+    <Build Include="Tables\Subscription.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="StoredProcedures\Unsubscribe.sql" />
+    <PostDeploy Include="SeedData\QueueStateSeedData.sql" />
+    <Build Include="StoredProcedures\QueueStateUpsert.sql" />
+    <None Include="DickinsonBros.Bus.SQL.publish.xml" />
+    <None Include="DickinsonBros_1.Bus.SQL.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DickinsonBros.Bus.SQL.refactorlog" />
   </ItemGroup>
 </Project>

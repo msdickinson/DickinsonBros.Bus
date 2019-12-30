@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5ff501eb-89c1-4213-852b-e6a44f6dccef" ChangeDateTime="12/28/2019 20:31:16">
+    <Property Name="ElementName" Value="[dbo].[Table1].[s]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="userToken" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0042c4f3-86fd-4549-9823-d8ffea5c5219" ChangeDateTime="12/28/2019 20:32:02">
+    <Property Name="ElementName" Value="[dbo].[Table1].[dateAdded]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="dateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6da8a845-b3cd-428b-b957-b7d30ee31861" ChangeDateTime="12/28/2019 20:32:10">
+    <Property Name="ElementName" Value="[dbo].[Table1].[dateCreated]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="083e1930-10a1-4418-9ed7-506073a857b9" ChangeDateTime="12/28/2019 20:32:14">
+    <Property Name="ElementName" Value="[dbo].[Table1].[userToken]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserToken" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="01307899-1a3f-454b-899f-1ff452ce9de8" ChangeDateTime="12/28/2019 20:32:29">
+    <Property Name="ElementName" Value="[dbo].[Table1].[Active]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Disabled" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0b3b5eb8-cd8e-4a88-b47f-515b1ef88920" ChangeDateTime="12/28/2019 20:37:23">
+    <Property Name="ElementName" Value="[ServiceBus].[User].[UserToken]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Token" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="48571fd1-dbb5-4137-8a2c-679718c21045" ChangeDateTime="12/28/2019 20:38:51">
+    <Property Name="ElementName" Value="[dbo].[Subscription].[Token]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Subscription]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af1f9c32-fff7-4fba-9da3-76bd41bf63f8" ChangeDateTime="12/28/2019 21:02:47">
+    <Property Name="ElementName" Value="[dbo].[QueueState].[dateAdded]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateAdded" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5f920d24-ce3d-4bba-bec2-23b4c9050a65" ChangeDateTime="12/28/2019 21:02:49">
+    <Property Name="ElementName" Value="[dbo].[QueueState].[dateChanged]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateChanged" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3aee1e41-8826-43f9-85d1-595a58a11edf" ChangeDateTime="12/28/2019 21:02:53">
+    <Property Name="ElementName" Value="[dbo].[QueueState].[state]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="State" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="66786e0a-9337-4b59-bb1e-e08fdc2e23b0" ChangeDateTime="12/28/2019 21:10:48">
+    <Property Name="ElementName" Value="[ServiceBus].[QueueState].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QueueId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fcbb00d9-bf5b-45dd-bcd2-054cefe3f1ea" ChangeDateTime="12/28/2019 21:11:07">
+    <Property Name="ElementName" Value="[ServiceBus].[Queue].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[Queue]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QueueId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="65a548e9-8928-45b9-b76f-500cf7e3fbe8" ChangeDateTime="12/29/2019 21:01:08">
+    <Property Name="ElementName" Value="[ServiceBus].[Queue].[DateAdded]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[Queue]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c41288ed-ca07-4de0-8d85-c41b7d6f3f2d" ChangeDateTime="12/29/2019 21:01:13">
+    <Property Name="ElementName" Value="[ServiceBus].[Subscriber].[DateAdded]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[Subscriber]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa2cdf44-038f-4221-a1e9-e17d6f050353" ChangeDateTime="12/29/2019 21:01:17">
+    <Property Name="ElementName" Value="[ServiceBus].[QueueState].[DateAdded]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30cff8a4-bfbd-4afd-958e-ff8a755b5f6f" ChangeDateTime="12/29/2019 21:01:21">
+    <Property Name="ElementName" Value="[ServiceBus].[Topic].[DateChanged]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[Topic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cd70a415-3232-4584-95cd-bc9ceec32ac8" ChangeDateTime="12/30/2019 12:53:35">
+    <Property Name="ElementName" Value="[ServiceBus].[QueueState].[State]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56904998-cad6-45e0-be3b-b3353ea31980" ChangeDateTime="12/30/2019 12:54:01">
+    <Property Name="ElementName" Value="[ServiceBus].[QueueState].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[QueueState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="State" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a43e90b6-920b-4961-8d8b-aac2e278144f" ChangeDateTime="12/30/2019 13:30:34">
+    <Property Name="ElementName" Value="[ServiceBus].[Topic].[DateCreated]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ServiceBus].[Topic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateChanged" />
+  </Operation>
+</Operations>
