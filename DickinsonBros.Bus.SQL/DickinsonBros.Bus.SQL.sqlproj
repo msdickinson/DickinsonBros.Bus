@@ -75,15 +75,18 @@
     <Build Include="Tables\QueueState.sql" />
     <Build Include="StoredProcedures\InsertTopic.sql" />
     <Build Include="Tables\Subscription.sql" />
+    <Build Include="StoredProcedures\UpdateQueue.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="StoredProcedures\Unsubscribe.sql" />
-    <PostDeploy Include="SeedData\QueueStateSeedData.sql" />
     <Build Include="StoredProcedures\QueueStateUpsert.sql" />
     <None Include="DickinsonBros.Bus.SQL.publish.xml" />
     <None Include="DickinsonBros_1.Bus.SQL.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DickinsonBros.Bus.SQL.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="SeedData\SeedData.sql" />
   </ItemGroup>
 </Project>

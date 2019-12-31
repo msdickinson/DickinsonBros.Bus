@@ -6,19 +6,17 @@ AS
 
 BEGIN TRANSACTION;  
 
-	--Get Topic Id, And Throw If Not Found
-	DECLARE @topicIdResult TABLE  
-	(  
-		TopicId bigInt
-	);  
+	DECLARE @currentDateTime AS datetime2(7) = SYSUTCDATETIME();
 
-	INSERT INTO @topicIdResult (TopicId)
-	SELECT TopicId 
+	--Get Topic Id, And Throw If Not Found
+	DECLARE @topicIdResult bigInt;
+
+	set @topicIdResult = (select TopicId 
 	FROM [ServiceBus].[Topic]
 	WHERE [TopicToken] = @topicToken and
-	      UserId = @userId
+	      UserId = @userId)
 
-	IF (SELECT count(*) FROM @topicIdResult ) = 0
+	IF @topicIdResult IS NULL
 		THROW 51000, 'The Topic does not exist.', 1; 
 
 	--Insert Topic Item
@@ -36,9 +34,9 @@ BEGIN TRANSACTION;
 	OUTPUT INSERTED.TopicItemId into @InsertTopicItemResult
 	VALUES
 	(
-		(select TopicId from @topicIdResult),
+		@topicIdResult,
 		@payload,
-		SYSUTCDATETIME()
+		@currentDateTime
 	)
 
 	--Insert Into into queue for each subscriber
@@ -58,10 +56,10 @@ BEGIN TRANSACTION;
 		(select TopicItemId from @InsertTopicItemResult),
 		1,
 		0,
-		SYSUTCDATETIME(),
-		SYSUTCDATETIME()
+		@currentDateTime,
+		@currentDateTime
 	FROM Subscription
-	inner join @topicIdResult as topicIdResult on Subscription.TopicId = topicIdResult.TopicId
+	where Subscription.TopicId = @topicIdResult
 
 	--Return topic item id, and queue count inserted into for diagnostic purposes
 	select

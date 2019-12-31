@@ -12,7 +12,8 @@ AS
 			inner join [ServiceBus].[TopicItem] on [ServiceBus].[TopicItem].TopicId = [ServiceBus].[Queue].TopicId
 		WHERE 
 			[ServiceBus].[Queue].UserId = @userId and 
-			[ServiceBus].[Queue].[State] = 1
+			[ServiceBus].[Queue].[State] = 1 and
+			[ServiceBus].[Queue].[RetryCount] <= 4
 	)
 	Update [ServiceBus].[Queue]
 	SET

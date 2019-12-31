@@ -1,7 +1,8 @@
 ﻿CREATE PROCEDURE ServiceBus.QueueStateUpsert
 ( 
 	@queueStateId int,
-	@state varchar(50)
+	@state varchar(50),
+    @dateChanged datetime2(7)
 )
 AS 
   SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
@@ -26,8 +27,8 @@ AS
 	  (
         @queueStateId,
         @state,
-        SYSUTCDATETIME(),
-        SYSUTCDATETIME()
+        @dateChanged,
+        @dateChanged
       );
  
   COMMIT

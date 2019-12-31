@@ -3,6 +3,9 @@
     @name VARCHAR(255),
     @schema VARCHAR(max)
 AS
+
+DECLARE @currentDateTime AS datetime2(7) = SYSUTCDATETIME()
+
 	insert into [ServiceBus].[Topic]
 	(
 		TopicToken,
@@ -19,8 +22,8 @@ AS
 		@userId,
 		@name,
 		@schema,
-		SYSUTCDATETIME(),
-		SYSUTCDATETIME()
+		@currentDateTime,
+		@currentDateTime
 	);
 	
 RETURN 0
